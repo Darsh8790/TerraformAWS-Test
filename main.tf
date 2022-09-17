@@ -29,7 +29,7 @@ provider "aws" {
   #aws_iam_policy_permits_name = "GitHubActionsIamPolicyPermits"
   #aws_iam_policy_assume_name  = "GitHubActionsIamPolicyAssume"
 #}
-/*
+
 # Build the VPC
 resource "aws_vpc" "vpc" {
   cidr_block           = "20.1.0.0/16"
@@ -61,4 +61,4 @@ resource "aws_route_table" "route_table2" {
   }
 }
 
-*/
+
