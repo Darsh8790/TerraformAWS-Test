@@ -19,7 +19,7 @@ provider "aws" {
 
 
 
-# Call the seed_module to build our ADO seed info
+# #Call the seed_module to build our ADO seed info
 module "bootstrap" {
   source                      = "./modules/bootstrap"
   name_of_s3_bucket           = "bhsworld-terraform-s3"
