@@ -2,9 +2,9 @@
 terraform {
   required_version = ">=0.12.13"
   #backend "s3" {
-  #  bucket         = "kyler-github-actions-demo-terraform-tfstate"
+  #  bucket         = "bhsworld-terraform-s3"
   #  key            = "terraform.tfstate"
-  #  region         = "us-east-1"
+  #  region         = "ap-south-1"
   #  dynamodb_table = "aws-locks"
   #  encrypt        = true
   #}
@@ -12,7 +12,7 @@ terraform {
 
 # Download any stable version in AWS provider of 2.36.0 or higher in 2.36 train
 provider "aws" {
-  region  = "us-east-1"
+  region  = "ap-south-1"
   version = "~> 2.36.0"
 }
 
@@ -22,7 +22,7 @@ provider "aws" {
 # Call the seed_module to build our ADO seed info
 module "bootstrap" {
   source                      = "./modules/bootstrap"
-  name_of_s3_bucket           = "kyler-github-actions-demo-terraform-tfstate"
+  name_of_s3_bucket           = "bhsworld-terraform-s3"
   dynamo_db_table_name        = "aws-locks"
   iam_user_name               = "GitHubActionsIamUser"
   ado_iam_role_name           = "GitHubActionsIamRole"
@@ -32,7 +32,7 @@ module "bootstrap" {
 
 # Build the VPC
 resource "aws_vpc" "vpc" {
-  cidr_block           = "10.1.0.0/16"
+  cidr_block           = "20.1.0.0/16"
   instance_tenancy     = "default"
 
   tags = {
