@@ -18,7 +18,7 @@ provider "aws" {
 
 
 
-
+/*
 # Call the seed_module to build our ADO seed info
 module "bootstrap" {
   source                      = "./modules/bootstrap"
@@ -60,4 +60,4 @@ resource "aws_route_table" "route_table2" {
     Terraform = "true"
   }
 }
-
+*/
