@@ -1,4 +1,4 @@
-# Defining Public Key
+## Defining Public Key
 variable "public_key" {
   default = "tests.pub"
 }
