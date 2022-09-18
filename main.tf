@@ -61,13 +61,5 @@ resource "aws_route_table" "route_table2" {
   }
 }
 
-# Build route table 3
-resource "aws_route_table" "route_table3" {
-  vpc_id = aws_vpc.vpc.id
 
-  tags = {
-    Name = "RouteTable3"
-    Terraform = "true"
-  }
-}
 
