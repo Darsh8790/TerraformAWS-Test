@@ -181,7 +181,7 @@ resource "aws_instance" "demoinstance" {
       "sudo docker --version",
       "sudo docker pull nginx",
     #  "sudo docker run --name docker-nginx -p 80:80 -d nginx"
-       "sudo docker run --name docker-nginxibhs -p 80:80 -d -v ~/docker-nginx/bhs:/usr/share/nginx/html nginx"
+      "sudo docker run --name docker-nginxibhs -p 80:80 -d -v ~/docker-nginx/bhs:/usr/share/nginx/html nginx"
   ]
  }
 }
