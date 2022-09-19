@@ -23,7 +23,7 @@ terraform {
   #aws_iam_policy_assume_name  = "GitHubActionsIamPolicyAssume"
 #}
 
-
+/*
 # Configure and downloading plugins for aws
 provider "aws" {
   region     = "${var.aws_region}"
@@ -179,3 +179,6 @@ resource "aws_instance" "demoinstance" {
   ]
  }
 }
+
+
+*/
