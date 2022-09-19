@@ -6,7 +6,7 @@ required_version = ">=0.12"
 backend "s3" {
 bucket         = "bhsworld-terraform-s3"
 key            = "terraform.tfstate"
-region         = "${var.aws_region}"
+region         = "ap-south-1"
 dynamodb_table = "aws-locks"
 encrypt        = true
 }
