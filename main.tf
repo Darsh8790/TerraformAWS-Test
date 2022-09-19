@@ -34,7 +34,7 @@ provider "aws" {
 }
 
   
-/*
+
 # Creating VPC
 resource "aws_vpc" "demovpc" {
   cidr_block       = "${var.vpc_cidr}"
