@@ -129,6 +129,16 @@ data "aws_key_pair" "bhs-nginx-key" {
   include_public_key = true
 }
 
+#Search EIp by allocation ID
+data "aws_eip" "by_allocation_id" {
+  id = "eipalloc-0e9613c45ac39a50a"
+}
+
+resource "aws_eip_association" "eip_assoc" {
+  instance_id   = aws_instance.demoinstance.id
+  allocation_id = aws_eip.by_allocation_id.id
+}
+
 # Creating EC2 Instance
 resource "aws_instance" "demoinstance" {
 
