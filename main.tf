@@ -1,29 +1,29 @@
 
-/*
+
 # Require TF version to be same as or greater than 0.12.13
 terraform {
 required_version = ">=0.12"
 backend "s3" {
 bucket         = "bhsworld-terraform-s3"
 key            = "terraform.tfstate"
-region         = "ap-south-1"
+region         = "${var.aws_region}"
 dynamodb_table = "aws-locks"
 encrypt        = true
 }
 }
 
-*/
+
 
 # #Call the seed_module to build our ADO seed info
-module "bootstrap" {
-  source                      = "./modules/bootstrap"
-  name_of_s3_bucket           = "bhsworld-terraform-s3"
-  dynamo_db_table_name        = "aws-locks"
-  iam_user_name               = "GitHubActionsIamUser"
-  ado_iam_role_name           = "GitHubActionsIamRole"
-  aws_iam_policy_permits_name = "GitHubActionsIamPolicyPermits"
-  aws_iam_policy_assume_name  = "GitHubActionsIamPolicyAssume"
-}
+#module "bootstrap" {
+  #source                      = "./modules/bootstrap"
+  #name_of_s3_bucket           = "bhsworld-terraform-s3"
+  #dynamo_db_table_name        = "aws-locks"
+  #iam_user_name               = "GitHubActionsIamUser"
+  #ado_iam_role_name           = "GitHubActionsIamRole"
+  #aws_iam_policy_permits_name = "GitHubActionsIamPolicyPermits"
+  #aws_iam_policy_assume_name  = "GitHubActionsIamPolicyAssume"
+#}
 
 
 
