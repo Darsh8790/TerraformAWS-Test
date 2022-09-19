@@ -175,7 +175,7 @@ resource "aws_instance" "demoinstance" {
     inline = [
     #  "A=`(sudo docker ps -a |awk '{print $1}'|grep -Ev CONTAINE)`",
     #  "sudo docker rm $A",
-      "sleep 30"
+      "sleep 30",
       "sudo apt-get update",
       "sudo apt install docker.io -y",
       "sudo snap install docker",
