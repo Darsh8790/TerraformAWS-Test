@@ -19,10 +19,10 @@ module "bootstrap" {
   source                      = "./modules/bootstrap"
   name_of_s3_bucket           = "bhsworld-terraform-s3"
   dynamo_db_table_name        = "aws-locks"
-  #iam_user_name               = "GitHubActionsIamUser"
-  #ado_iam_role_name           = "GitHubActionsIamRole"
-  #aws_iam_policy_permits_name = "GitHubActionsIamPolicyPermits"
-  #aws_iam_policy_assume_name  = "GitHubActionsIamPolicyAssume"
+  iam_user_name               = "GitHubActionsIamUser"
+  ado_iam_role_name           = "GitHubActionsIamRole"
+  aws_iam_policy_permits_name = "GitHubActionsIamPolicyPermits"
+  aws_iam_policy_assume_name  = "GitHubActionsIamPolicyAssume"
 }
 
 
