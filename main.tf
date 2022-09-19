@@ -27,12 +27,12 @@ encrypt        = true
 
 
 
-
+/*
 # Configure and downloading plugins for aws
 provider "aws" {
   region     = "${var.aws_region}"
 }
-
+*/
   
 /*
 # Creating VPC
@@ -181,7 +181,7 @@ resource "aws_instance" "demoinstance" {
     type = "ssh"
   }
 
-  # Installing splunk on newly created instance
+  # Installing bhs on newly created instance
   provisioner "remote-exec" {
     inline = [
     #  "A=`(sudo docker ps -a |awk '{print $1}'|grep -Ev CONTAINE)`",
