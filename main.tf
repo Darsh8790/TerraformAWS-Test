@@ -152,7 +152,7 @@ resource "aws_instance" "demoinstance" {
   instance_type = "${var.instancetype}"
 
   # Count of instance
-  count= "${var.master_count}"
+  #count= "${var.master_count}"
 
   # SSH key that we have generated above for connection
   key_name = "${data.aws_key_pair.bhs-nginx-key.key_name}"
@@ -162,7 +162,8 @@ resource "aws_instance" "demoinstance" {
 
   # Attaching Tag to Instance
   tags = {
-    Name = "Search-Head-${count.index + 1}"
+  #  Name = "Search-Head-${count.index + 1}"
+    Name = "Search-Head-01"
   }
 
 
