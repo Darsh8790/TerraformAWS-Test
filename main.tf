@@ -136,7 +136,7 @@ data "aws_eip" "by_allocation_id" {
 
 resource "aws_eip_association" "eip_assoc" {
   instance_id   = aws_instance.demoinstance
-  allocation_id = aws_eip.by_allocation_id
+  allocation_id = aws_eip.by_allocation_id.id
 }
 
 # Creating EC2 Instance
